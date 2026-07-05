@@ -50,7 +50,7 @@ app.use(express.static(path.join(__dirname, "public")));
 const store = MongoStore.create({
   mongoUrl: dbUrl,
   crypto: {
-    secret: Process.env.SECRET,
+    secret: process.env.SECRET,
   },
   touchAfter: 24 * 3600// touch every 24 hours
 });
